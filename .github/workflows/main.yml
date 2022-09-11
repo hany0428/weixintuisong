@@ -21,7 +21,9 @@ jobs:
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
       - name: install pip packages
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install pip install requests
+            pip install zhdate
+              pip freeze > requirements.txt --upgrade pip
           pip3 install -r requirements.txt
       - name: weixin
         run: |
